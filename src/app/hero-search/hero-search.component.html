@@ -1,8 +1,8 @@
-<div id="search-component">
+<div id="search-component" class="container col-lg-3">
   <h4>Hero Search</h4>
-  <input #searchBox id="search-box" (keyup)="search(searchBox.value)" />
-  <div>
-    <div *ngFor="let hero of heroes | async" (click)="gotoDetail(hero)" class="search-result">
+  <input #searchBox id="search-box" (keyup)="search(searchBox.value)" class="form-control" />
+  <div class="list-group">
+    <div *ngFor="let hero of heroes | async" (click)="gotoDetail(hero)" class="list-group-item search-result">
       {{hero.name}}
     </div>
   </div>
